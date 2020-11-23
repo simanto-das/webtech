@@ -1,0 +1,6 @@
+1,addidas shoe,800,shoe brand,shoe
+2,real madrid jersey,500,jersey,jersy
+3,football,1200,football,outdoor gaming accessories
+4,ps4,5000,pS4,online games
+6,bat,800,bat,outdoor gaming accessories
+5,Ludu,200,Home games,indoor gaming accessories
