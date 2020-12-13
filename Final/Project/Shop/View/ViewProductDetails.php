@@ -4,11 +4,31 @@
   <link rel="stylesheet" type="text/css" href="ViewProductDetails.css">
   <link rel="stylesheet" type="text/css" href="Buttonstyle.css">
   <style>
+    .backbtn {
+  background-color:  #e7e7e7; 
+  border: none;
+  color: black;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.backbtn {border-radius: 8px;}
+
     .buttoner
     {
       display: grid;
     }
   </style>
+  <script >
+    var btn = document.getElementById('back');
+btn.addEventListener('click', function() {
+  document.location.href = 'AssignProductDetails.html';
+});
+  </script>
 </head>
 <body>
   <?php include '../Model/dbconnection.php';?>
@@ -32,9 +52,9 @@
                  <form action="EditPage.php" method="POST"><button class="buttonedit" type="submit" value="submit" name="editbtn">Edit</button>
                   <input type="hidden" name="editid" value="<?php echo $row['id'];?>">
                  </form>
-                 <form >
-                  <button class="buttonremove">Remove</button>
-                  <input type="hidden" name="edit" value="<?php echo $row['id'];?>">
+                 <form  action="../Controller/Remove.php" method="POST">
+                  <button id="remove" class="buttonremove" value="submit" type="submit" name="removebtn">Remove</button><button type="button" onClick="document.location.href='AssignProductDetails.html'" class="backbtn">back</button>
+                  <input type="hidden" name="remove" value="<?php echo $row['id'];?>">
                 </form>
                
              </div>
